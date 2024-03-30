@@ -145,8 +145,8 @@ class ResumeExtractor:
 
 if __name__ == "__main__":
     # Specify the directory containing the JDs and resumes
-    jd_directory = Path(r"C:\Users\Shami\Documents\MSc AI\Sem1 - Data Analytics\Project\Resume_rank\data\job_descriptions")
-    resume_directory = Path(r"C:\Users\Shami\Documents\MSc AI\Sem1 - Data Analytics\Project\Resume_rank\data\resumes")
+    jd_directory = Path(r"job_descriptions")
+    resume_directory = Path(r"resumes")
 
     # Specify the output file
     output_file = Path("jd_and_resume_data.csv")
@@ -155,7 +155,7 @@ if __name__ == "__main__":
     jd_text_file = Path("job_descriptions.txt")
 
     # Read the skills list from a CSV file
-    skills_file = Path(r"C:\Users\Shami\Documents\MSc AI\Sem1 - Data Analytics\Project\Resume_rank\data\skills\skill_red.csv")
+    skills_file = Path(r"skill_red.csv")
     with open(skills_file, "r", encoding="utf-8") as file:
         reader = csv.reader(file)
         skills_list = [row[0].strip() for row in reader]
